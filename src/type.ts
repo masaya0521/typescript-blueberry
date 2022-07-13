@@ -23,3 +23,21 @@ const sum = (...args: number[]): number => {
 
 console.log(sum(1, 10, 100));
 console.log(sum(1, 5));
+
+// コールバック関数
+type User = {
+  name: string;
+  age: number;
+};
+
+const users: User[] = [
+  { name: "man", age: 25 },
+  { name: "woman", age: 25 },
+  { name: "junior", age: 15 },
+];
+
+const names = users.map((u: User) => u.name + "だよ");
+console.log(names);
+
+const highName = users.filter((u: User) => u.age > 20);
+console.log(highName);
