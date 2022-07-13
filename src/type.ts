@@ -36,6 +36,7 @@ const users: User[] = [
   { name: "junior", age: 15 },
 ];
 
+// アロー関数は基本高階関数と一緒に使われる
 const names = users.map((u: User) => u.name + "だよ");
 console.log(names);
 
