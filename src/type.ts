@@ -42,3 +42,20 @@ console.log(names);
 
 const highName = users.filter((u: User) => u.age > 20);
 console.log(highName);
+
+// ユニオン型
+type Man = {
+  name: string;
+};
+type Animal = {
+  type: number;
+};
+type UnionUser = Man | Animal;
+const user1: UnionUser = {
+  name: "man",
+};
+const user2: UnionUser = {
+  type: 1,
+};
+console.log("user1:" + user1.name);
+console.log("user2:" + user2.type);
