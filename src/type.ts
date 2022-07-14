@@ -1,3 +1,5 @@
+import { sign } from "crypto";
+
 type Human = {
   name: string;
 };
@@ -59,3 +61,10 @@ const user2: UnionUser = {
 };
 console.log("user1:" + user1.name);
 console.log("user2:" + user2.type);
+
+// リテラルとユニオンについて
+function SingleNumber(type: "plus" | "minus") {
+  return type === "plus" ? 1 : -1;
+}
+console.log(SingleNumber("plus"));
+console.log(SingleNumber("minus"));
